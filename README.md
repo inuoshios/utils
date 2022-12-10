@@ -10,13 +10,13 @@ You can install the package using the command below
 go get github.com/ixxiv/utils
 ```
 
-Import the package
+### Import the package
 
 ```go
 import "github.com/ixxiv/utils"
 ```
 
-Example
+### Example
 
 ```go
 package main
@@ -34,6 +34,6 @@ func main() {
 }
 ```
 
-Contribution
+### Contributions
 
 PRs are accepted. You can also create a new issue if necessary.
