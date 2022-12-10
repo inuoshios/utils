@@ -13,7 +13,7 @@ import (
 //	name = utils.Input("Enter your name")
 //	fmt.Printf("Your name is &s", name)
 func Input(stmt string) string {
-	fmt.Printf("%s: ", stmt)
+	fmt.Printf("%s ", stmt)
 	reader := bufio.NewReader(os.Stdin)
 	read, err := reader.ReadString('\n')
 	if err != nil {
