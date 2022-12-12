@@ -14,10 +14,12 @@ import (
 //	fmt.Printf("Your name is &s", name)
 func Input(stmt string) string {
 	fmt.Printf("%s ", stmt)
-	reader := bufio.NewReader(os.Stdin)
-	read, err := reader.ReadString('\n')
-	if err != nil {
-		panic(err)
+
+	reader := bufio.NewScanner(os.Stdin)
+
+	if ok := reader.Scan(); !ok {
+		panic("error while trying to scan")
 	}
-	return read
+
+	return reader.Text()
 }
