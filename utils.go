@@ -3,6 +3,7 @@ package utils
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -18,7 +19,7 @@ func Input(stmt string) string {
 	reader := bufio.NewScanner(os.Stdin)
 
 	if ok := reader.Scan(); !ok {
-		panic("error while trying to scan")
+		log.Fatal("error scanning input")
 	}
 
 	return reader.Text()
