@@ -7,13 +7,13 @@ Utils is a package created for handling input in the terminal. It's similar to t
 You can install the package using the command below
 
 ```bash
-go get github.com/ixxiv/utils
+go get github.com/inuoshios/utils
 ```
 
 ### Import the package
 
 ```go
-import "github.com/ixxiv/utils"
+import "github.com/inuoshios/utils"
 ```
 
 ### Example

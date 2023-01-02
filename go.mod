@@ -1,3 +1,3 @@
-module github.com/ixxiv/utils
+module github.com/inuoshios/utils
 
 go 1.19
