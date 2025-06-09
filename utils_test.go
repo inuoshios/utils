@@ -7,7 +7,10 @@ import (
 
 func TestInput(t *testing.T) {
 	t.Run("Print name", func(t *testing.T) {
-		name := Input("Enter your name")
+		name, err := Input("Enter your name")
+		if err != nil {
+			t.Errorf("an error occurred while reading input: %v", err)
+		}
 
 		fmt.Printf("%s", name)
 	})

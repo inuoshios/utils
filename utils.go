@@ -2,8 +2,8 @@ package utils
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -11,16 +11,19 @@ import (
 //
 // For instance if we are trying to print out a name, it can be done like this
 //
-//	name = utils.Input("Enter your name")
+//	name, err = utils.Input("Enter your name")
+//	if err != nil {
+//	    log.Fatal(err)
+//	}
 //	fmt.Printf("Your name is &s", name)
-func Input(stmt string) string {
+func Input(stmt string) (string, error) {
 	fmt.Printf("%s ", stmt)
 
 	reader := bufio.NewScanner(os.Stdin)
 
 	if ok := reader.Scan(); !ok {
-		log.Fatal("error scanning input")
+		return "", errors.New("error scanning input")
 	}
 
-	return reader.Text()
+	return reader.Text(), nil
 }
