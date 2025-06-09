@@ -26,7 +26,10 @@ import "fmt"
 func main() {
     // print out my github username
 
-    ghUsername := utils.Input("GH Username")
+    ghUsername, err := utils.Input("GH Username")
+    if err != nil {
+      fmt.Printf("error reading github username %v\n", err)
+    }
 
     fmt.Printf("Welcome %s", ghUsername)
 
